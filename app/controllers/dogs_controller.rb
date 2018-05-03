@@ -6,6 +6,11 @@ class DogsController < ApplicationController
         @dogs = Dog.all
     end 
 
+    # def index_sorted
+    #     # @sorted_doggies = Dog.all.sort(employees)
+    #     @sorted_dogs = Dog.all.map {|a, b| a.employees.size <=> b.employees.size }
+    # end
+
     def edit
     end 
 
@@ -16,6 +21,7 @@ class DogsController < ApplicationController
 
     def new
         @dog = Dog.new
+        @employees = Employee.all
     end
 
     def create 
@@ -40,7 +46,7 @@ def find_dog
 end 
 
 def dog_params
-    params.require(:dog).permit(:name, :breed, :age)
+    params.require(:dog).permit(:name, :breed, :age, employee_ids: [])
 end
 
 end

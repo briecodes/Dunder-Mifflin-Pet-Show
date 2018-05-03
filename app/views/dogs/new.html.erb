@@ -10,5 +10,7 @@
     <%= d.label :age %><br>
     <%= d.text_field :age %><br><br>
 
+    <%= d.collection_check_boxes :employee_ids, @employees, :id, :last_name %>
+
     <%= d.submit %>
 <% end %>
