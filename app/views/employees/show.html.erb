@@ -1,0 +1,11 @@
+<h1> <%= @employee.first_name %> <%= @employee.last_name %></h1>
+<h3> <%= @employee.alias %></h3>
+<h3> <%= @employee.title %></h3>
+<h3> <%= @employee.office %></h3>
+<h3> Their dog/owner/overlord is: <%= @employee.dog.name %> </h3>
+<% if @employee.img_url %>
+    <img src='<%= @employee.img_url %>'/>
+<% end %>
+
+<%= button_to "Back to list of employees", employees_path, method: 'GET' %>
+
