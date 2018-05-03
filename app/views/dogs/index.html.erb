@@ -1,0 +1,10 @@
+<h1>Alll Dogs (go to heaven)</h1>
+
+<ul>
+    <% @dogs.each do |dog| %>
+        <li>
+            <%= link_to dog.name, dog %>
+            <img src="<%= dog.employee.picture_url%>" />
+        </li>
+    <% end %>
+</ul>
