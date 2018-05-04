@@ -1,8 +1,8 @@
 <h1> <%= @employee.first_name %> <%= @employee.last_name %></h1>
-<h3> <%= @employee.alias %></h3>
-<h3> <%= @employee.title %></h3>
-<h3> <%= @employee.office %></h3>
-<h3> Their dog/owner/overlord is: <%= @employee.dog.name %> </h3>
+<h3>Title: <%= @employee.title %></h3>
+<h3>Alias: <%= @employee.alias %></h3>
+<h3>Office: <%= @employee.office %></h3>
+<h3>Their dog/owner/overlord is: <%= link_to @employee.dog.name, @employee.dog %> </h3>
 <% if @employee.img_url %>
     <img src='<%= @employee.img_url %>'/>
 <% end %>
