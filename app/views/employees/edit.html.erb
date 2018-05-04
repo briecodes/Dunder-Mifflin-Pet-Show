@@ -1,8 +1,20 @@
 <h1>EDIT A DOPE DUNDAR EMPLOYEE AKA NOT DWIGHT</h1>
+
+<br>
+
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+        <b><%= error %>. </b>
+    <% end %>
+<% end %>
+
+<br><br>
+
 <%= render "form"%>
 
-
-
 <%= form_tag @employee, method: "DELETE" do %>
+
+<br><br>
+
 <%= submit_tag "DELEEEEETEEEEE" %>
 <%end%>

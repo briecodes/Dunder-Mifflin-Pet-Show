@@ -1,3 +1,16 @@
 <h1>CREATE NEW DOPE DUNDAR EMPLOYEE AKA NOT DWIGHT</h1>
+
+<br>
+
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+        <b><%= error %>. </b>
+    <% end %>
+<% end %>
+
+<br><br>
+
 <%= render "form"%>
 
+<br><br><br><br>
+<%= link_to "< Cancel", employees_path %>
