@@ -9,3 +9,11 @@ Employees:
 
 <% end %>
 </ul>
+
+<br><br>
+
+<%= link_to "Edit #{@dog.name} >", edit_dog_path(@dog) %>
+
+<br><br>
+
+<%= link_to "< View All Dogs", dogs_path %>
